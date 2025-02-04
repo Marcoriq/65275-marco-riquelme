@@ -1,0 +1,490 @@
+/* Fuentes 
+
+font-family: "Poppins", sans-serif;
+font-family: "Anton", sans-serif;
+
+
+Colores: 
+Morado: #783786
+
+*/
+
+
+/* Fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+p, h1 {
+    color: #783786;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #783786;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4d2556;
+}
+
+/* --------------------------- HEADER --------------------------- */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-left a,
+.menu-right a {
+    margin-right: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #783786;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu-left a::after,
+.menu-right a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #4d2556;
+}
+
+.menu-left a:hover::after,
+.menu-right a:hover::after {
+    width: 100%;
+}
+
+.menu-left a:hover,
+.menu-right a:hover {
+    color: #4d2556;
+}
+
+.logo-center {
+    justify-content: center;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+.logo img {
+    width: 105px;
+}
+
+.menu-right {
+    justify-content: flex-end;
+}
+
+.boton-agendar {
+    padding: 10px 20px;
+    background-color: #783786;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-agendar:hover {
+    background-color: #4d2556;
+}
+
+/* --------------------------- Banner principal --------------------------- */
+.banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-color: #f8cee2;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8cee2;
+    background-image: url(../assets/banner-principal-img.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.banner-left-column, .banner-right-column {
+    flex: 1;
+    padding: 20px;
+    color: #783786;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.banner-left-column h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+    color: #783786;
+}
+
+.banner-left-column p {
+    font-size: 22px;
+}
+
+.banner-right-column {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .banner::before {
+        background-size: cover;
+    }
+
+    .banner-left-column {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .banner-left-column h1 {
+        font-size: 36px;
+    }
+
+    .banner-left-column p {
+        font-size: 18px;
+    }
+
+    .banner-right-column {
+        display: none;
+    }
+}
+
+/* --------------------------- Acerca de --------------------------- */
+.acerca-de {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+.acerca-de-left, .acerca-de-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acerca-de-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.acerca-de-right article {
+    max-width: 600px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.acerca-de-right h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #783786;
+}
+
+.acerca-de-right p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #783786;
+}
+
+.boton-ver-mas {
+    padding: 10px 20px;
+    background-color: #783786;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.boton-ver-mas:hover {
+    background-color: #4d2556;
+}
+
+@media (max-width: 768px) {
+    .acerca-de {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .acerca-de-left, .acerca-de-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .acerca-de-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .acerca-de-right article {
+        text-align: center;
+        padding: 0;
+    }
+
+    .acerca-de-right h2 {
+        font-size: 28px;
+    }
+
+    .acerca-de-right p {
+        font-size: 16px;
+    }
+}
+
+/* --------------------------- Servicios --------------------------- */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    background-color: #f0e7e7;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.titulo-principal {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #783786;
+}
+
+.servicio {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 50px 60px 80px 60px;
+    text-align: center;
+    color: #783786;
+}
+
+.servicio-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    font-size: 18px;
+}
+
+.servicio button {
+    margin-top: 10px;
+}
+
+/* --------------------------- Formación --------------------------- */
+.formacion {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    align-items: center;
+}
+
+.formacion-left, .formacion-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formacion-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.formacion-left article {
+    max-width: 600px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.formacion-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #783786;
+}
+
+.formacion-left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #783786;
+}
+
+@media (max-width: 768px) {
+    .formacion {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .formacion-left, .formacion-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .formacion-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .formacion-left article {
+        text-align: center;
+        padding: 0;
+    }
+
+    .formacion-left h2 {
+        font-size: 28px;
+    }
+
+    .formacion-left p {
+        font-size: 16px;
+    }
+}
+
+/* --------------------------- Footer --------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-footer img {
+    width: 120px;
+    height: auto;
+}
+
+.rrss-agendar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+}
+
+.iconos-redes img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.iconos-redes img:hover {
+    transform: scale(1.1);
+}
+
+.boton-footer button {
+    padding: 10px 20px;
+    background-color: #783786;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.boton-footer button:hover {
+    background-color: #4d2556;
+}
+
+.pie-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .rrss-agendar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
